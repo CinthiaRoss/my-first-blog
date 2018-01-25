@@ -27,23 +27,16 @@
         
 		</div>
 
-        
-		{% for post in posts %}
-            
-			<div class = "post">
-                
-				<p>published: {{ post.published_date}}</p>
-                
-				<hl><a href = "">{{ post.title }}</a></hl>
-                
-				<p>{{ post.text|linebreaksbr }}</p>
-            
-			</div>
-        
-		{% endfor %}
 
-    
-	
+        <div class = "content container">
+    		<div class = "row">
+    			<div class = "col-md-8">
+    				{% block content %}
+    				{% endblock %}
+				</div>
+			</div>	
+		</div>
+			
 	</body>
 
 </html>
